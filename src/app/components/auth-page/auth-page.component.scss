@@ -1,0 +1,116 @@
+:host {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    padding: 100px 0px;
+}
+
+mat-card {
+    padding: 2rem;
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    grid-gap: 3rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+mat-form-field {
+    width: 15rem;
+}
+
+mat-card-title,
+mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+.message{
+    width: 15rem;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+.card {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.text-card,
+.text-card-moved {
+    background: linear-gradient(to right, #3f51b5, #3f51b510);
+    width: 40%;
+    padding: 10% 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.text-card {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.text-card-animate {
+    animation-name: moveOut, changeSizeAndBackground;
+    animation-duration: 1s, 1s;
+}
+
+.text-card-moved {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    animation-name: moveIn, changeSizeAndBackground;
+    animation-duration: 1s, 1s;
+}
+
+.card-moved {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateX(30%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveOut {
+    0% {
+        transform: translateX(-30%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes changeSizeAndBackground {
+    0% {
+        width: 20%;
+    }
+
+    30% {
+        width: 60%;
+    }
+
+    100% {
+        width: 40%;
+      
+    }
+}

@@ -1,0 +1,19 @@
+<div class="list-wrap">
+  <h3>Post #{{id}} </h3>
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{posts[id-1].title}}</mat-card-title>
+      <mat-card-subtitle>User id: {{posts[id-1].userId}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{posts[id-1].body}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button *ngIf="like === false" mat-button (click)="like = !like"><mat-icon>favorite</mat-icon></button>
+      <button *ngIf="like === true" mat-button color="warn"
+        (click)="like = !like"><mat-icon>favorite</mat-icon></button>
+      <button mat-button [class.shared]="share===true" (click)="share = !share">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  <button color="accent" class="button-home" mat-raised-button (click)="goHome()"><mat-icon>home</mat-icon></button>
+</div>

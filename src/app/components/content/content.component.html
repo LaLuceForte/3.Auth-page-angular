@@ -1,0 +1,4 @@
+<mat-icon class = "sign-out" (click)="signOut()">exit_to_app</mat-icon>
+<app-posts *ngIf="visiblePosts" (onClick)="goToPost($event)" [posts]="posts"
+    [displayedColumns]="displayedColumns"></app-posts>
+<app-post *ngIf="!visiblePosts" (onClick)="goHome()" [id]="id" [posts]="posts"></app-post>
